@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var user = mongoose.model('clients', {
+var user = mongoose.model('clientsV2', {
     lastName: { type: String },
     firstName: { type: String },
     dateOfBirth: {type: String},

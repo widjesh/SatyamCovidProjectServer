@@ -14,7 +14,7 @@ router.get('/',async (req,res,next)=>{
 //Post a Client
 router.post('/',async(req,res,next)=>{
   try{
-    const isAvailable = Client.findOne({lastName:req.body.lastName,firstName:req.body.firstName}, async(err,data)=>{
+    const isAvailable = await Client.findOne({lastName:req.body.lastName,firstName:req.body.firstName}, async(err,data)=>{
       if(!err){
         if(data !== null){
           res.status(303).json({

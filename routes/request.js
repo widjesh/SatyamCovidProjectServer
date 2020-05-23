@@ -60,15 +60,18 @@ router.post('/',async(req,res,next)=>{
                 subject: "Submitted Data on Repatriating Form ✔", // Subject line
                 text:`
                 Dear ${savedClient.firstName} ${savedClient.lastName},
-                Wij hebben uw informatie ontvangen.
-                Dank en we doen er alles aan U te laten accomoderen.
-
-                We have received your information.
-                Thank you and we’ll do all within our power to accomodate you.
-
-                With Kind Regards,
-                Satyam Holidays
-                WordlClass.WorldWide
+                Beste reiziger  ,
+                Uw registratieaanvraag is ontvangen en zoals toegezegd doorgeleid naar de instanties 
+                Als U een ticket moet aanschaffen ( klanten met SLM of TUI ticket) graag na bevestiging kontakt met ons maken per mail op satyam@satyamholidays.net, zodat wij U de betalingsgegevens kunnen toezenden en na betaling, Uw ticket. 
+                Voor appen en bellen zie onderaan dit bericht 
+                Het is ook mogelijk dat U zelf rechtstreeks  door KLM of de Ambassade benaderd wordt, echter staan wij in samenspraak met de instanties anytime klaar uw ticket makkelijk en snel te verzorgen of te wijzigen zodat u kunt afreizen
+                Wij spreken met u de hoop uit dat u gauw thuis bent
+                Satyam Holidays is telefonisch en per app  alsvolgt bereikbaar : 
+                In Nederland op het nummer 070-7113625 v.a 12:00  t/m 20:00 uur en via whats app op nr.+31707113625.
+                In Suriname op het nummer  1611   v.a  11:00  t/m 16:00  uur en  via whats app nr. +597436950
+                mvg
+                Satyam team 
+                Be safe
                 `
               });
             

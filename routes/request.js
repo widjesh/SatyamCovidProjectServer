@@ -41,19 +41,19 @@ router.post('/',async(req,res,next)=>{
               });
             }
             else{
-              res.status(200).json(savedClient);
+              console.log("SAVED...");
+              
               //SEND MAIL
               let transporter = nodemailer.createTransport({
                 host: process.env.HOST,
-                port: 225,
-                secure: false, // true for 465, false for other ports
+                port: 465,
+                secure: true, // true for 465, false for other ports
                 auth: {
                   user: process.env.EMAIL, // generated ethereal user
                   pass: process.env.PASSWORD // generated ethereal password
                 }
               });
-            
-              
+              console.log("AFter setup");
               // send mail with defined transport object
               let info = await transporter.sendMail({
                 from: '"Satyam Holidays Covid-Team" <covid@satyamholidays.net>', // sender address
@@ -77,6 +77,7 @@ router.post('/',async(req,res,next)=>{
             
               console.log(`Message sent for ${savedClient.firstName} ${savedClient.lastName} : email = ${savedClient.email}`);
               console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+              res.status(200).json(savedClient);
             }
           }catch(err){
             next(err);

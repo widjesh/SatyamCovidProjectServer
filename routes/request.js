@@ -56,17 +56,13 @@ router.post('/',async(req,res,next)=>{
               console.log("AFter setup");
               // send mail with defined transport object
               let info = await transporter.sendMail({
-                from: '"Satyam Holidays" <stmaarten@satyamholidays.net>', // sender address
+                from: '"Satyam Holidays" <satyam@satyamholidays.net>', // sender address
                 to: `${savedClient.email}`, // list of receivers
                 subject: "Submitted Data on St Maarten Form ✔", // Subject line
                 html:`<p> Beste ${savedClient.firstName} ${savedClient.lastName},</br>
                 </br>
-                Uw registratieaanvraag is ontvangen en zoals toegezegd doorgeleid naar de instanties</br>
-                Voor appen en bellen zie onderaan dit bericht </br>
-                Wij spreken met u de hoop uit dat u gauw thuis bent</br>
-                Satyam Holidays is per mail bereikbaar op satyam@satyamholidays.net</br>
-                In Nederland op het nummer 070-7113625 v.a 12:00  t/m 20:00 uur en via whats app op nr.+31707113625.</br>
-                In Suriname op het nummer  1611   v.a  11:00  t/m 16:00  uur en  via whats app nr. +597436950</br>
+                Bedankt voor de registratie! </br>
+                Wij hebben uw gegevens in goede orde ontvangen en zullen u contacten met betrekking tot vluchten van en naar St.Maarten zo gauw die bekend zijn. </br>
                 </br>
                 Mvg,</br>
                 Satyam Team </br>
